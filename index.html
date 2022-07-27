@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="proto-container">
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+    </div>
+    <div class="container">
+        <div class="inner">
+            <div class="left">
+                <img src="https://iconape.com/wp-content/files/ko/111661/svg/uipath-3.svg" alt="CompleteUI logo"
+                    class="logo">
+                <div class="content">
+                    <h1>Complete <span>UI Design Course</span></h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa ducimus voluptates porro.</p>
+                    <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, facere!</p>
+                </div>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <input type="text" name="email" id="name" placeholder="your email">
+                <button>Notify me</button>
+                <div class="attention">
+                    <img src="https://avatarfiles.alphacoders.com/280/thumb-280970.png" alt="Avatar" class="we">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Curved_Arrow.svg/1200px-Curved_Arrow.svg.png"
+                        alt="Arrow pointing to email from" class="arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let left = document.querySelector('.left');
+        let content = document.querySelector('.content');
+        let protos = document.querySelectorAll('.proto');
+
+        left.addEventListener('mousemove', (e) => {
+            let move = (e.clientX * 0.05) + 4;
+            let move2 = (e.clientX * 0.003);
+
+            content.style.transform = `translateX(-${move2}%)`;
+
+            protos.forEach((proto) => {
+                proto.style.transform = `translateX(${move}%)`;
+            })
+        })
+    </script>
+</body>
+
+</html>
